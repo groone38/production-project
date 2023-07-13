@@ -1,17 +1,13 @@
-import React, { Suspense, useState, useContext } from "react";
-import Counter from "./components/Counter";
-// import "./index.scss";
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { MainPageAsync } from "./pages/MainPage/MainPage.async";
-import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
-import { Theme, ThemeContext } from "./theme/ThemeContext";
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./helpers/classNames/classNames";
+import { useTheme } from "./provider/theme/useTheme";
+import { classNames } from "shared/lib/classNames/classNames";
+import { AboutPageAsync } from "pages/AboutPage";
+import { MainPageAsync } from "pages/MainPage";
 
 const App = () => {
   const { theme, toggle } = useTheme();
-  const bool = true;
   return (
     <div className={classNames("app", {}, [theme])}>
       <button onClick={toggle}>Toggle</button>
