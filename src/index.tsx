@@ -3,6 +3,7 @@ import "app/styles/index.scss";
 import App from "./app/App";
 import { BrowserRouter } from "react-router-dom";
 import ThemeProvider from "app/provider/theme/ThemeProvider";
+import "shared/config/i18next/i18next";
 
 render(
   <BrowserRouter>
