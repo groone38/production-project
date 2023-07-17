@@ -1,9 +1,9 @@
-import { render } from "react-dom";
-import "app/styles/index.scss";
-import App from "./app/App";
-import { BrowserRouter } from "react-router-dom";
-import ThemeProvider from "app/provider/theme/ThemeProvider";
-import "shared/config/i18next/i18next";
+import { render } from 'react-dom';
+import 'app/styles/index.scss';
+import { BrowserRouter } from 'react-router-dom';
+import ThemeProvider from 'app/provider/theme/ThemeProvider';
+import App from './app/App';
+import 'shared/config/i18next/i18next';
 
 render(
   <BrowserRouter>
@@ -11,5 +11,5 @@ render(
       <App />
     </ThemeProvider>
   </BrowserRouter>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );

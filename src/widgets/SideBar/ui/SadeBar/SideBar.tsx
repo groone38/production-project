@@ -1,8 +1,8 @@
-import React, { ReactNode, useState } from "react";
-import cls from "./SideBar.module.scss";
-import { classNames } from "shared/lib/classNames/classNames";
-import { ThemeSwicher } from "widgets/ThemeSwicher";
-import LangSwitcher from "widgets/LangSwitcher/LangSwitcher";
+import React, { ReactNode, useState } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { ThemeSwicher } from 'widgets/ThemeSwicher';
+import LangSwitcher from 'widgets/LangSwitcher/LangSwitcher';
+import cls from './SideBar.module.scss';
 
 interface SideBarProps {
   className?: string;
@@ -12,11 +12,13 @@ interface SideBarProps {
 const SideBar = ({ className, children }: SideBarProps) => {
   const [open, setOpen] = useState(false);
   const onToggle = () => {
-    setOpen((prev) => !open);
+    setOpen((prev) => !prev);
   };
   return (
     <div className={classNames(cls.SideBar, { [cls.open]: open }, [className])}>
-      <button onClick={onToggle}>toggle</button>
+      <button type="button" onClick={onToggle}>
+        toggle
+      </button>
       <div className={cls.switchers}>
         <ThemeSwicher />
         <LangSwitcher className={cls.lang} />
