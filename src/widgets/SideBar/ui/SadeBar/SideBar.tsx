@@ -8,7 +8,7 @@ interface SideBarProps {
   className?: string;
   children?: ReactNode;
 }
-
+// Остановился на тестах в самом начале 20 урок
 const SideBar = ({ className, children }: SideBarProps) => {
   const [open, setOpen] = useState(false);
   const onToggle = () => {
