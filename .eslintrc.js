@@ -34,6 +34,7 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "max-len": ["error", { ignoreComments: true }],
+    quotes: ["error", "double"],
   },
   globals: {
     __IS_DEV__: true,
