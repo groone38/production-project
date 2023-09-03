@@ -4,6 +4,7 @@
  */
 
 import type { Config } from "jest";
+import path from "path";
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -151,7 +152,14 @@ const config: Config = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
+  modulePaths: ["<rootDir>src"],
+
   rootDir: "../../",
+  setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
+  moduleNameMapper: {
+    "\\.s?css$": "identity-obj-proxy",
+    "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+  },
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
   //   "\\\\node_modules\\\\"
@@ -171,7 +179,6 @@ const config: Config = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: ["\\\\node_modules\\\\", "\\.pnp\\.[^\\\\]+$"],
-
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
 
