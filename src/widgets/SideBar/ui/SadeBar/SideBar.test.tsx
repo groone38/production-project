@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import SideBar from "./SideBar";
 import { withTranslation } from "react-i18next";
+import SideBar from "./SideBar";
 
 describe("classNames", () => {
   it("Render", () => {
