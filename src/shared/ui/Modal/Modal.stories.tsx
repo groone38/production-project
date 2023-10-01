@@ -1,9 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Modal from "./Modal";
-// import "app/styles/themes/dark.scss";
-// import "app/styles/themes/normal.scss";
-// import "./Button.module.scss";
-// import "../../../../config/storybook/storybook.scss";
 
 const meta = {
   title: "shared/Modal",

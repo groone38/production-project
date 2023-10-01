@@ -1,3 +1,4 @@
+import { Counter } from "entities/Counter";
 import React from "react";
 import { useTranslation } from "react-i18next";
 // import Button, { ThemeButton } from "shared/ui/Button/Button";
