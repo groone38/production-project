@@ -2,9 +2,9 @@ import { render } from "react-dom";
 import "app/styles/index.scss";
 import { BrowserRouter } from "react-router-dom";
 import ThemeProvider from "app/provider/theme/ThemeProvider";
+import { ErrorBoundary } from "app/provider/ErrorBoundary";
 import App from "./app/App";
 import "shared/config/i18next/i18next";
-import { ErrorBoundary } from "app/provider/ErrorBoundary";
 
 render(
   <BrowserRouter>
@@ -14,5 +14,5 @@ render(
       </ThemeProvider>
     </ErrorBoundary>
   </BrowserRouter>,
-  document.getElementById("root"),
+  document.getElementById("root")
 );

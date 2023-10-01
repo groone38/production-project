@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 // import "app/styles/themes/normal.scss";
 // import "./Button.module.scss";
 // import "../../../../config/storybook/storybook.scss";
-import Button, { ThemeButton } from "./Button";
+import Button, { Theme, ThemeButton } from "./Button";
 
 const meta = {
   title: "shared/Button",
@@ -12,9 +12,9 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  // argTypes: {
+  //   backgroundColor: { control: "color" },
+  // },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -37,5 +37,13 @@ export const Outline: Story = {
   args: {
     children: "Test",
     theme: ThemeButton.OUTLINE,
+  },
+};
+
+export const ClearPrimary: Story = {
+  args: {
+    children: "Test",
+    theme: ThemeButton.OUTLINE,
+    themeApp: Theme.SECONDARY,
   },
 };

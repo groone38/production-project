@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { NavBar } from "widgets/NavBar";
 import SideBar from "widgets/SideBar/ui/SadeBar/SideBar";
